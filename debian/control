@@ -1,0 +1,28 @@
+Source: libsocket-perl
+Maintainer: Debian Perl Group <pkg-perl-maintainers@lists.alioth.debian.org>
+Uploaders: gregor herrmann <gregoa@debian.org>
+Section: perl
+Testsuite: autopkgtest-pkg-perl
+Priority: optional
+Build-Depends: debhelper-compat (= 13),
+               netbase <!nocheck>,
+               perl-xs-dev,
+               perl:native
+Standards-Version: 4.6.0
+Vcs-Browser: https://salsa.debian.org/perl-team/modules/packages/libsocket-perl
+Vcs-Git: https://salsa.debian.org/perl-team/modules/packages/libsocket-perl.git
+Homepage: https://metacpan.org/release/Socket
+Rules-Requires-Root: no
+
+Package: libsocket-perl
+Architecture: any
+Depends: ${misc:Depends},
+         ${perl:Depends},
+         ${shlibs:Depends}
+Description: networking constants and support functions
+ Socket provides a variety of constants, structure manipulators and other
+ functions related to socket-based networking. The values and functions
+ provided are useful when used in conjunction with Perl core functions such as
+ socket(), setsockopt() and bind(). It also provides several other support
+ functions, mostly for dealing with conversions of network addresses between
+ human-readable and native binary forms, and for hostname resolver operations.

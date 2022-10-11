@@ -1,0 +1,32 @@
+Description: skip network tests
+Origin: vendor
+Forwarded: not-needed
+Author: gregor herrmann <gregoa@debian.org>
+Last-Update: 2020-07-10
+
+--- a/t/getaddrinfo.t
++++ b/t/getaddrinfo.t
+@@ -71,6 +71,7 @@
+ my $goodhost = "cpan.perl.org";
+ 
+ SKIP: {
++    skip "No network access during Debian builds", 2 if $ENV{NO_NETWORK};
+     skip "Resolver has no answer for $goodhost", 2 unless gethostbyname( $goodhost );
+ 
+     ( $err, @res ) = getaddrinfo( "cpan.perl.org", "ftp", { socktype => SOCK_STREAM } );
+@@ -86,6 +87,7 @@
+ # any request. We'd better check for them
+ 
+ SKIP: {
++    skip "No network access during Debian builds", 1 if $ENV{NO_NETWORK};
+     skip "Resolver has an answer for $missinghost", 1 if gethostbyname( $missinghost );
+ 
+     # Some OSes return $err == 0 but no results
+@@ -125,6 +127,7 @@
+ # Now check that names with AI_NUMERICHOST fail
+ 
+ SKIP: {
++    skip "No network access during Debian builds", 1 if $ENV{NO_NETWORK};
+     skip "Resolver has no answer for $goodhost", 1 unless gethostbyname( $goodhost );
+ 
+     ( $err, @res ) = getaddrinfo( $goodhost, "ftp", { flags => AI_NUMERICHOST, socktype => SOCK_STREAM } );
