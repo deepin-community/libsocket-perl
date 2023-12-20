@@ -1,9 +1,10 @@
+.editorconfig
 Artistic
 Changes
 Copying
 LICENSE
 Makefile.PL
-MANIFEST
+MANIFEST			This list of files
 MANIFEST.SKIP
 Socket.pm
 Socket.xs

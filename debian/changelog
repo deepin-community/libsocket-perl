@@ -1,3 +1,31 @@
+libsocket-perl (2.037-1) unstable; urgency=medium
+
+  * Import upstream version 2.037.
+  * Update years of packaging copyright.
+  * Declare compliance with Debian Policy 4.6.2.
+
+ -- gregor herrmann <gregoa@debian.org>  Sat, 24 Jun 2023 17:02:21 +0200
+
+libsocket-perl (2.036-1) unstable; urgency=medium
+
+  * Import upstream version 2.036.
+
+ -- gregor herrmann <gregoa@debian.org>  Mon, 22 Aug 2022 08:45:07 +0200
+
+libsocket-perl (2.035-1) unstable; urgency=medium
+
+  * Import upstream version 2.035.
+  * Declare compliance with Debian Policy 4.6.1.
+
+ -- gregor herrmann <gregoa@debian.org>  Fri, 01 Jul 2022 19:39:19 +0200
+
+libsocket-perl (2.033-1) unstable; urgency=medium
+
+  * Import upstream version 2.033.
+  * Update years of packaging copyright.
+
+ -- gregor herrmann <gregoa@debian.org>  Sat, 07 May 2022 17:55:39 +0200
+
 libsocket-perl (2.032-1) unstable; urgency=medium
 
   [ intrigeri ]
